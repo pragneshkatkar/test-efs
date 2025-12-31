@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 async function getProducts() {
-	const res = await fetch('http://localhost:3000/products', {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`, {
 		cache: 'force-cache',
 		next: {
 			tags: ['products'],

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 async function getHomeData() {
-	const res = await fetch('http://localhost:3000/home', {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/home`, {
 		cache: 'force-cache',
 		next: {
 			tags: ['home'],
